@@ -2,4 +2,30 @@ html
 	head
 		title Mi primera página con Express
 	body
-		h1!= hola
+		//declaracion de un arreglo
+		- var arreglo = [1,2,3];
+		// iteracion de un arreglo
+		- for (var  i = 0; i < arreglo.length; ++i)
+			// p. permite asegurar la informacion y utilizar combinaciones de html con javascript
+			p.
+				<h3> Hola #{arreglo[i]} este #[a(href="test.com") link] es una prueba (bucle)</h3>
+
+		// condicionales
+		- if ((5-4) > 0)
+			p.
+				<h3> Hola #{nombre} este #[a(href="test.com") link] es una prueba (condicional)</h3>
+
+		// for each
+		- each item in arreglo
+			p.
+				<h3> Hola #{item} este #[a(href="test.com") link] es una prueba (for each)</h3>
+
+		// case
+		- each item in arreglo
+			case item
+				when 1
+					p <h3>El item era uno (case)</h3>
+				when 2
+					p <h3>El item era dos (case)</h3>
+				default 
+					p <h3>El item es ninguno (case)</h3>
