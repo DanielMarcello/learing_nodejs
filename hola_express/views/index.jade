@@ -2,6 +2,11 @@ html
 	head
 		title Mi primera página con Express
 	body
+		//asignación de variable
+		h1!= nombre
+
+		//p ejecuta codigo js y a la vez lo imprime
+
 		//declaracion de un arreglo
 		- var arreglo = [1,2,3];
 		// iteracion de un arreglo
@@ -27,5 +32,5 @@ html
 					p <h3>El item era uno (case)</h3>
 				when 2
 					p <h3>El item era dos (case)</h3>
-				default 
+				default
 					p <h3>El item es ninguno (case)</h3>
